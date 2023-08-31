@@ -408,4 +408,5 @@ urlpatterns = [
     }
  }```
  
-### STEP 9: Run `python manage.py runserver`
+### STEP 9: Run command
+`python manage.py runserver`
