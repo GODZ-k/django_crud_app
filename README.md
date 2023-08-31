@@ -1,5 +1,5 @@
 # A Simple Django Dynamic CURD (Create, Update, Read and Delete) Application Using Functional Based Views
-We used Django and functional based views to develop a simple CRUD application to allow one to create a new task, Read task, update a task and delete a task. we used a postgresql database in this CRUD App. we can check the App data on Railway.app.com(https://railway.app/)
+We used Django and functional based views to develop a simple CRUD application to allow one to create a new task, Read task, update a task and delete a task. we used a postgresql database in this CRUD App. we can check the App data on [Railway.app](https://railway.app/)
 
 ### Working Demo
 https://github.com/GODZ-k/django_crud_app/assets/131422684/dd71c379-9322-4881-9fb4-1e8bbed73cf9
@@ -389,7 +389,7 @@ urlpatterns = [
 ]
 ```
 ### STEP 8: Connect POSTGRESQL database if you want (optonal)
-- go WWW.Railway.app.com and create a account
+- go [Railway.app](https://railway.app/) and create a account
 - click POSTGRESQL
 - click connect
 - copy all available variable values and paste into `setting.py`
@@ -411,11 +411,11 @@ urlpatterns = [
 ### STEP 9: Run command
 `python manage.py runserver`
 
-#### don't forget to create superuser for admin panned where you can see all the data
+#### Don't forget to create superuser for admin panned where you can see all the data
  - Run `python manage.py createsuperuser`
  - username
  - email
  - password
  - password again
-#### if you forget admin password
+#### If you forget admin password
 - Run `python manage.py changepassword <user_name>`
