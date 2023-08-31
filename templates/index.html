@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+
+        }
+
+        .nav{
+            background-color: skyblue;
+            padding: 10px;
+        }
+.heading{
+    text-align: center;
+    padding: 20px;
+}
+.div{
+  overflow-x: scroll;
+  margin: 0 20px;
+
+
+}
+
+
+
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    {% include 'nav.html' %}
+    <h1 class="heading">Data table</h1>
+  <div class="div">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">SNO</th>
+            <th scope="col">Name</th>
+            <th scope="col">E-mail</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Information</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        {% for show in alldata %}
+          <tr>
+            <th scope="row">{{forloop.counter}}</th>
+            <td>{{show.name}}</td>
+            <td>{{show.email}}</td>
+            <td>{{show.phone}}</td>
+            <td>{{show.info}}</td>
+            <td style="white-space: nowrap;">
+                <a href="/delete/{{show.id}}" class="btn btn-danger md-sm button">Delete</a>
+                <a href="/update/{{show.id}}" class="btn btn-success md-sm button">Update</a>
+            </td>
+
+          </tr>
+        {% endfor %}
+
+        </tbody>
+     </table>
+  </div>
+
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<form method="post" action="/adddata/" class="form-control form">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label class="form-label">Name</label>
+      <input type="text" class="form-control" name="name" placeholder="enter your name">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" class="form-control" name="email" placeholder="enter your E-mail">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Phone</label>
+        <input type="number" class="form-control" name="phone" placeholder="enter your number">
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Information</label>
+        {% comment %} <input type="text" class="form-control" name="name" placeholder="enter your name"> {% endcomment %}
+        <textarea name="Information" id="" cols="30" rows="10" class="form-control"></textarea>
+      </div>
+      
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
