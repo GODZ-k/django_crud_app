@@ -71,6 +71,10 @@ admin.site.register(employe,showempdata)
   ]
   ```
 ### STEP 5: Create html files in template folder
+- we creates 3 templates `index.py` for show the data in the table
+- `adddata.html` for insert the data into the table
+- `nav.html` for only navbar we coz we need navbar in every page so i created only one and paste it on every page .
+- `update.html` for update the table data
  #### index.html 
  ```
 <!DOCTYPE html>
@@ -139,30 +143,6 @@ admin.site.register(employe,showempdata)
   </div>
 </body>
 </html>
-```
-  #### Form.html
-  ```
-<form method="post" action="/adddata/" class="form-control form">
-    {% csrf_token %}
-    <div class="mb-3">
-      <label class="form-label">Name</label>
-      <input type="text" class="form-control" name="name" placeholder="enter your name">
-    </div>
-    <div class="mb-3">
-        <label class="form-label">Email</label>
-        <input type="email" class="form-control" name="email" placeholder="enter your E-mail">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Phone</label>
-        <input type="number" class="form-control" name="phone" placeholder="enter your number">
-      </div>
-      <div class="mb-3">
-        <label class="form-label">Information</label>
-        {% comment %} <input type="text" class="form-control" name="name" placeholder="enter your name"> {% endcomment %}
-        <textarea name="Information" id="" cols="30" rows="10" class="form-control"></textarea>
-      </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
 ```
  #### adddata.html
  ```
