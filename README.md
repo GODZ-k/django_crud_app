@@ -410,3 +410,12 @@ urlpatterns = [
  
 ### STEP 9: Run command
 `python manage.py runserver`
+
+#### don't forget to create superuser for admin panned where you can see all the data
+ - Run `python manage.py createsuperuser`
+ - username
+ - email
+ - password
+ - password again
+#### if you forget admin password
+- Run `python manage.py changepassword <user_name>`
